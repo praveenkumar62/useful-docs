@@ -1,0 +1,347 @@
+/* Wrapping the word at particular point using CakePHP */
+<?php echo wordwrap($unit_name, 20, "<br>", true); ?>
+
+--------------------------------------------
+
+/* Overriding the anchor tag after clicking the tag */
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+		color: #252525 !important;
+	}
+
+	.nav-tabs > li.active > a .fa {
+		color: red !important;
+	} 
+
+--------------------------------------------
+
+/* Textarea field height adjustment depending on content --> METHOD 1 */
+
+<div class="auto-textarea">
+    <textarea>test</textarea>
+</div>
+
+$('.auto-textarea').on( 'change keyup keydown paste cut', 'textarea', function (){
+    $(this).css('height','0px');
+    $(this).css('height', this.scrollHeight+'px');
+}).find( 'textarea' ).change();
+
+/* Textarea field height adjustment depending on content --> METHOD 2 */
+$('.auto-textarea').on( 'change keyup keydown paste cut', 'textarea', function (){
+    $(this).height(0).height(this.scrollHeight);
+}).find( 'textarea' ).change();
+
+--------------------------------------------
+
+/* Responsive navbar using CSS & JS [Using CSS i have styled, need to use JS for dropdown] */
+
+<!--
+    <div class="topnav" id="myTopnav">
+        <a href="index.html"><span>T</span>alent <span>S</span>howcast</a>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="rank.html">Ranking</a>
+        <a href="#">Users</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" style="padding: 4px;"></i>
+        </a>
+    </div>
+-->
+
+.topnav 
+{
+    overflow: hidden;
+    background-color: rgb(54, 156, 230);
+}
+  
+.topnav a 
+{
+    float: left;
+    display: block;
+    font-family: 'Special Elite', cursive;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:first-child
+{    
+    background-color: rgb(78, 124, 223);
+    border: 1px solid rgb(78, 124, 223);
+    padding: 0 16px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+}
+  
+.topnav a:hover:not(:first-child)
+{
+    background-color: rgb(26, 26, 148);
+    border: none;
+    color: white;
+}
+
+.topnav a:first-child:hover
+{
+    background-color: rgb(26, 26, 148);
+    color: white;
+}
+
+.topnav .icon 
+{
+    display: none;
+    background-color: #369CE6;
+}
+
+.topnav a.icon:hover
+{
+    background-color: #369CE6;
+}
+
+.topnav > .active
+{
+    background-color: #70D3FF;
+    color: white;
+}
+
+.topnav a span
+{
+    color: hsl(54, 96%, 51%);
+    font-size: 35px;
+}
+  
+  @media screen and (max-width: 992px) 
+  {
+    .topnav a:not(:first-child) 
+    {
+        display: none;
+    }
+    .topnav a.icon 
+    {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 992px) 
+  {
+    .topnav.responsive 
+    {
+        position: relative;
+    }
+    .topnav.responsive .icon 
+    {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a 
+    {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  /* jquery file is this for CSS navbar */
+    
+	function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+            }
+	
+-----------------------------------------------------------------------------------------------------------
+  
+/* This is good way of sizing the bootstrap navbar learnt from traversy */
+
+.navbar
+{
+    min-height: 33px;
+    margin-bottom: 0;
+}
+
+.navbar-nav > li > a , .navbar-brand
+{
+    height: 33px;
+    padding-top: 6px;
+    padding-bottom: 0;
+}    
+
+-------------------------------------------------------------------------------------------------------------
+
+/* Centering the content using flexbox */
+
+<div class="flex-container">
+   <div class="box">
+   </div>
+</div>
+
+
+html,body
+{
+height: 100%;
+}
+
+.flex-container
+{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;    /* flex-wrap: nowrap; -> dont changes the position & tries max shrink || flex-wrap: wrap; -> changes
+                               the position and places the element one by one or whatever is possible like bootstrap */
+    
+    justify-content: center;   /* It aligns the content center depending on width */
+    align-items: center;       /* It aligns the content center depending on height */
+}
+
+.box
+{
+   height: 100px;
+   width: 100px;
+}
+
+              ---------- OR ----------
+
+/* Centering the content using CSS */
+
+<div class="container">
+   <div class="box">
+   </div>
+</div>
+
+
+.container
+{
+    position: relative;
+}
+
+.box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+-------------------------------------------------------------------------------------------------------
+
+/* Placing the fonts inside the input field */
+
+<form>
+      <div class="form-group input-icons">
+         <span class="fa fa-user-o" aria-hidden="true"></span>
+         <input type="text" id="name" placeholder="Enter your name" class="form-control" required>
+      </div>
+</form>
+
+.input-icons
+{
+    position: relative;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.fa-user-o
+{ 
+    position: absolute;
+    top: 9px;
+    left: 15px;
+}
+
+.input-icons input
+{
+    background: #fcfcfc;
+    text-indent: 30px;
+}
+
+::-webkit-input-placeholder
+{
+    text-align: left;
+}
+
+--------------------------------------------------------------------------------------------------------
+
+/* Styling the input type="file" */
+
+<div class="form-group " style="overflow:hidden;">
+    <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 size-reduced">
+              <span style="margin-left:10px;" class="fa fa-picture-o" aria-hidden="true"></span>
+              <label class="label">Upload your Photo<input type="file" required>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 size-reduced">
+              <span style="margin-left:10px;" class="fa fa-file-text-o" aria-hidden="true"></span>
+              <label class="label">Upload your ID Proof<input type="file" required>
+          </div>
+     </div>
+</div>
+
+.label
+{
+    color: rgba(0,0,0,0.5);
+    background: #fcfcfc; 
+    border: 1px solid rgb(168, 166, 166);
+    display: table;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"]
+{
+    display: none;
+}
+
+.size-reduced          /* Reducing the size of input field */
+{
+    height: 36px;
+    position: relative;
+    color: #aaa;
+    font-size: 16px;
+}
+
+--------------------------------------------------------------------------------------------------------
+
+/* Removing the Blue outline when clicking */
+
+<<element/class/id>>:focus {
+    outline: 0 !important;
+}
+
+--------------------------------------------------------------------------------------------------------
+
+/* Placing the dotted lines [...] at the end of 3rd line */
+
+<div id="content">
+asajshakj jasajsas
+asasasa bbbbbbbbbbb
+asasasaaaaaaabbb
+aaaaa
+bbbbb
+asasasasasas bbbbasaaaaaaaaa asas asas asaasasa sasasa
+</div>
+
+<style>
+#content{
+overflow: hidden;
+width:100px;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
+<style>
+
+--------------------------------------------------------------------------------------------------------
+
+/* Placing the dotted lines [...] at the end of 1st line {CSS only} */
+
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+width:100px; // some width

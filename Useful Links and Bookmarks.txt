@@ -1,0 +1,93 @@
+Templates for Practising
+
+https://www.templatemonster.com/color/blue-templates/
+https://visme.co/blog/website-color-schemes/
+
+
+Useful links
+
+Look for the names for animation
+https://www.pagecloud.com/blog/how-to-integrate-motion-into-your-website-design
+
+How to slide the navbar when scrolling
+https://www.w3schools.com/howto/howto_js_navbar_slide.asp
+
+How to create a dynamic menu icon-bar
+https://www.w3schools.com/howto/howto_css_menu_icon.asp
+
+Clicking the image shows big on same screen -- NAME [ A Simple jQuery Script to Swap Images On Click ] 
+https://www.youtube.com/watch?v=rHj_tieiupE
+
+Intro to html5 animation -- NAME [ Intro to HTML5 Animation with GreenSock (GSAP) Tutorial (Live Streamed) ]
+https://www.youtube.com/watch?v=v9GK4Rf6w3A
+
+Clicking creates a circled bubble object
+https://jsfiddle.net/xumbrpa4/
+
+Adding a Link to Google Charts API
+https://stackoverflow.com/questions/6205621/how-to-add-links-in-google-chart-api
+
+Chart js
+https://www.youtube.com/watch?v=sE08f4iuOhA
+https://www.youtube.com/watch?v=Ly-9VTXJlnA
+
+Create Particle Effects With Particles.js
+https://www.youtube.com/watch?v=qK3cgD09Qf0
+
+Build & Deploy A React JS Text Generator App
+https://www.youtube.com/watch?v=yU5DYccb77A
+
+What Is A RESTful API? Explanation of REST & HTTP
+https://www.youtube.com/watch?v=Q-BpqyOT3a8
+
+RESTful API From Scratch Using Node, Express and MongoDB
+https://www.youtube.com/watch?v=eB9Fq9I5ocs
+
+Nodemailer - Send Emails From Your Node.js App
+https://www.youtube.com/watch?v=nF9g1825mwk
+
+Recipe App Using Node.js & PostgreSQL - Part 1
+https://www.youtube.com/watch?v=AFiqctkoVJ4&t=1s
+
+Send SMS Text Messages From Node.js
+https://www.youtube.com/watch?v=980wnspXLe0
+
+Node.js Image Uploading With Multer
+https://www.youtube.com/watch?v=9Qzmri1WaaE
+
+Node.js With Passport Authentication | Full Project
+https://www.youtube.com/watch?v=6FOq4cUdH8k
+
+SSH Crash Course | With Some DevOps
+https://www.youtube.com/watch?v=hQWRp-FdTpc
+
+Gatsby JS Crash Course
+https://www.youtube.com/watch?v=6YhqQ2ZW1sc
+
+
+
+Bookmarks
+
+Online background remover for gif
+https://www.online-image-editor.com/
+
+Image optimizer for jpg
+http://www.jpeg-optimizer.com/
+
+File input field customization
+https://www.tutorialrepublic.com/faq/how-to-customize-file-input-type-using-css-and-jquery.php
+
+Lat and Lan of India
+https://www.mapsofindia.com/lat_long/tamilnadu/
+
+Drag and Drop location to localStorage
+https://stackoverflow.com/questions/46415253/save-drag-and-drop-location-to-local-storage
+
+Sending automated tasks using node js
+https://dev.to/aramrafeq/send-automated-reports-using-nodejs-104e
+
+JS loading screen while page loads
+https://stackoverflow.com/questions/25253391/javascript-loading-screen-while-page-loads
+
+Splash screen design samples
+https://speckyboy.com/splash-screen-design/
